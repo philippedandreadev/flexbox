@@ -2,3 +2,29 @@ body {
     margin: 0;
     padding: 0;
 }
+.container {
+    display: flex;
+}
+.item {
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: grid;
+    place-content: center;
+    font-size: 1.3em;
+}
+.item-1 {
+    background-color:blue;
+}
+.item-2 {
+    background-color:rgb(217, 131, 144);
+}
+.item-3 {
+    background-color:yellowgreen
+}
+.item-4 {
+    background-color:yellow;
+}
+.item-5 {
+    background-color:teal;
+}
