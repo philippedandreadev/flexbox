@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    background-color:blue;
+    color: white;
+    padding: 2rem;
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1em;
+}
+.container {
+    display: flex;
+    
+}
+.content {
+    min-height: 400px;
+}
+.item {
+    color: white;
+    display: grid;
+    place-content: center;
+    font-size: 1.2em;
+    padding: 1em;
+    width: 70px;
+    height: 70px;
+}
+.item-basis {
+ /* Définit une valeur selon l'axe où on est. pour row c'est la largeur et column c'est la hauteur */   
+    width: 400px;
+    height: 400px;
+    color: white;
+}
+.item-1 {
+    /* Par défaut l'ordre des items est à zéro */
+    background-color:blue;
+    order: 1;
+}
+.item-2 {
+    background-color:rgb(217, 131, 144);
+}
+.item-3 {
+    background-color:yellowgreen;
+    order: 3;
+}
+.item-4 {
+    background-color:yellow;
+}
+.item-5 {
+    background-color:teal;
+    align-self: flex-end;
+}
+.item-6 {
+    background-color:blueviolet;
+}
+.item-7 {
+    background-color:black;
+}
+
+/* Par défaut le flex-grow est à 0. Si on le met à 1, l'espace disponible est rempli */
+.item-8 {
+    background-color:aquamarine;
+    /* avec le flex-grow à 1 l'item-8 prend tout l'espace disponible restant malgré sa valeur à 200px
+    l'item-9 garde sa valeur à 200px.
+    Si l'item-8 etait à flex-grow à 2 et l'item-9 à flex-grow à 1 alors l'item-8 prendrait 2 fois plus
+    d'espace disponible que l'item-9*/
+    width: 200px;
+    flex-grow: 1;
+}
+.item-9 {
+    background-color:brown;
+    width: 200px;
+}
+
+/* Par défaut le flex-shrink est à 1 */
+
+/* En mettant le flex-shrink à 2 sur l'item-10 celui-ci va se réduire 2 fois plus lorsqu'on va réduire l'écran 
+en dessous de sa valeur initiale */
+.item-10 {
+    background-color:tomato;
+    width: 300px;
+    flex-shrink: 2;
+}
+.item-11 {
+    background-color:steelblue;
+    width: 300px;
+}

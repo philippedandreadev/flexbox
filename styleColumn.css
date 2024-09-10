@@ -18,19 +18,16 @@ h2 {
     text-align: center;
     background: black;
     color: white;
+    margin: 0;
     padding: 1em;
 }
 .item {
+    height: 70px;
+    width: 70px;
     color: white;
     display: grid;
     place-content: center;
-    font-size: 1.2em;
-    padding: 1em;
-    width: 70px;
-    height: 70px;
-}
-.itemStretch {
-    width: 70px;
+    font-size: 1.3em;
 }
 .item-1 {
     background-color:blue;
@@ -47,61 +44,58 @@ h2 {
 .item-5 {
     background-color:teal;
 }
-
 .align {
-    min-height: 400px;
+    height: 500px;
     background-color:aqua;
 }
-
+.content {
+     height: 500px;
+}
 /* par défaut la flex-direction est à row (en ligne), on peut 
 inverser la direction avec flex-direction: row-reverse et également la mettre en colonne. flex-direction: column */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 500px;
 }
 .container2 {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:column;
     justify-content: start;
 }
 .container3 {
     display: flex;
+    flex-direction: column;
     justify-content: end;
 }
 .container4 {
     display: flex;
-    justify-content: space-evenly
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .container5 {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 .container6 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .container7 {
     display: flex;
-    align-items: start;
+    flex-direction: column;
+    align-items: stretch;
 }
 .container8 {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .container9 {
     display: flex;
+    flex-direction: column;
     align-items: end;
-}
-/* si on ne met pas hauteur, les éléments sont fetchés. Ils prennent tout l'espace disponible */
-.container10 {
-    display: flex;
-}
-/* le flex-wrap à wrap permet aux éléments de passer les éléments les uns sous les autres lorsqu'il
-n'y a pas assez de place. Par défaut le flex-wrap est à no-wrap. Il existe le center, le start, le end, le
-space-arround, space-between et le space-evenly*/
-.container11 {
-    display: flex;
-    /* flex-flow est la propriété raccourci de flex-direction et de flex-wrap */
-    flex-flow: row wrap;
-    align-content: center;
 }
